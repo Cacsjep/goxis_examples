@@ -1,7 +1,7 @@
 {
     "acapPackageConf": {
         "setup": {
-            "appName": "goxisyoloexample",
+            "appName": "Yolov5 Example",
             "embeddedSdkVersion": "3.0",
             "friendlyName": "Goxis Yolov5 Example",
             "runMode": "never",

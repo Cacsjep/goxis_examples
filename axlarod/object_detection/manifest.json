@@ -10,7 +10,7 @@
     },
     "acapPackageConf": {
         "setup": {
-            "friendlyName": "Goxis Object D. Axlarod Example",
+            "friendlyName": "Object Detection Example",
             "appName": "axlaroddetectexample",
             "vendor": "Goxis",
             "embeddedSdkVersion": "3.0",

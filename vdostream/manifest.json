@@ -2,7 +2,7 @@
     "schemaVersion": "1.6.0",
     "acapPackageConf": {
         "setup": {
-            "friendlyName": "Goxis Vdo Example",
+            "friendlyName": "Vdo Example",
             "appName": "vdostreamexample",
             "vendor": "Goxis",
             "embeddedSdkVersion": "3.0",
