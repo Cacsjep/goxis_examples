@@ -45,9 +45,9 @@ go packages directly without using acapapp package.
 | `axoverlay`	                | Render rects via axolveray api                                         |
 | `axlarod/classify`	        | Classification example with larod and vdo api  (artpec-8)              |
 | `axlarod/object_detection`	| Object detection example with larod/vdo and overlay api api  (artpec-8)|
-| `axlarod/yolov5`	            | Yolov5 example with larod/vdo and overlay api api  (artpec-8)          |
+| `axlarod/yolov5`	            | Yolov5 detection example with larod/vdo and overlay api api  (artpec-8)|
 | `axparameter`                 | Demonstrate how to get an parameter and listen to changes              |
 | `axstorage`                   | Interact with axstorage api                                            |
 | `license` 	                | Show how to obtain the license state                                   |
-| `vdostream` 	                | High level wrapper demonstration to get video frames (stream)          |
+| `vdostream` 	                | Demonstration how to get video frames from vdo                         |
 | `webserver`                   | Reverse proxy webserver with fiber                                     |
