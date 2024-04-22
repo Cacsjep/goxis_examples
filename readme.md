@@ -16,6 +16,8 @@ goxisbuilder.exe --appdir="./axevent/send"
 #### How each example should be builded
 ``` shell
 go install github.com/Cacsjep/goxisbuilder@latest
+git clone https://github.com/Cacsjep/goxis_examples
+cd goxis_examples
 goxisbuilder --appdir="./axevent/send"
 goxisbuilder --appdir="./axevent/subscribe"
 goxisbuilder --appdir="./axlarod/classify" -files converted_model.tflite
