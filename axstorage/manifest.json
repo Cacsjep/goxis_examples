@@ -2,7 +2,7 @@
     "schemaVersion": "1.6.0",
     "acapPackageConf": {
         "setup": {
-            "friendlyName": "AxStorage Example",
+            "friendlyName": "Goxis AxStorage Example",
             "appName": "axstorage",
             "vendor": "Goxis",
             "embeddedSdkVersion": "3.0",

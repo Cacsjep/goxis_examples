@@ -10,7 +10,7 @@
     },
     "acapPackageConf": {
         "setup": {
-            "friendlyName": "AxOverlay Example",
+            "friendlyName": "Goxis AxOverlay Example",
             "appName": "axoverlay",
             "vendor": "Goxis",
             "embeddedSdkVersion": "3.0",

@@ -2,7 +2,7 @@
     "schemaVersion": "1.6.0",
     "acapPackageConf": {
         "setup": {
-            "friendlyName": "AxLicense Example",
+            "friendlyName": "Goxis License Example",
             "appName": "licenseexample",
             "vendor": "Goxis",
             "embeddedSdkVersion": "3.0",

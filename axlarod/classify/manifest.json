@@ -2,7 +2,7 @@
     "schemaVersion": "1.6.0",
     "acapPackageConf": {
         "setup": {
-            "friendlyName": "Classify Example",
+            "friendlyName": "Goxis Classify Axlarod Example",
             "appName": "axlarodclassexample",
             "vendor": "Goxis",
             "embeddedSdkVersion": "3.0",
