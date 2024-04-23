@@ -10,8 +10,8 @@
     },
     "acapPackageConf": {
         "setup": {
-            "friendlyName": "Goxis AxOverlay Example",
-            "appName": "axoverlay",
+            "friendlyName": "AxOverlay Rect Text Example",
+            "appName": "axoverlayr",
             "vendor": "Goxis",
             "embeddedSdkVersion": "3.0",
             "runMode": "never",
