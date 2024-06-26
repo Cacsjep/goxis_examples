@@ -3,17 +3,16 @@ package main
 import (
 	"fmt"
 
-	"github.com/Cacsjep/goxis/pkg/acapapp"
 	"github.com/Cacsjep/goxis/pkg/axoverlay"
 )
 
 // Initialize the overlay provider
 func (lea *larodExampleApplication) InitOverlay() error {
-	if lea.overlayProvider, err = acapapp.NewOverlayProvider(renderCallback, nil, nil); err != nil {
+	if lea.overlayProvider, err = axoverlay.NewOverlayProvider(renderCallback, nil, nil); err != nil {
 		return err
 	}
 	lea.app.AddCloseCleanFunc(lea.overlayProvider.Cleanup)
-	if _, err = lea.overlayProvider.AddOverlay(acapapp.NewAnchorCenterRrgbaOverlay(axoverlay.AxOverlayTopLeft, lea)); err != nil {
+	if _, err = lea.overlayProvider.AddOverlay(axoverlay.NewAnchorCenterRrgbaOverlay(axoverlay.AxOverlayTopLeft, lea)); err != nil {
 		return err
 	}
 	return nil

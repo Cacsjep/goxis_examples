@@ -3,6 +3,7 @@ package main
 import (
 	"github.com/Cacsjep/goxis/pkg/acapapp"
 	"github.com/Cacsjep/goxis/pkg/axlarod"
+	"github.com/Cacsjep/goxis/pkg/axoverlay"
 	"github.com/Cacsjep/goxis/pkg/axvdo"
 )
 
@@ -85,7 +86,7 @@ type larodExampleApplication struct {
 	infer_result      *axlarod.JobResult             // infer_result holds the result of the detection model job.
 	prediction_result *PredictionResult              // prediction_result stores the output of the inference process.
 	threshold         float32                        // threshold is the minimum score required for an object to be considered detected.
-	overlayProvider   *acapapp.OverlayProvider       // overlayProvider is used to draw overlay on the video stream.
+	overlayProvider   *axoverlay.OverlayProvider     // overlayProvider is used to draw overlay on the video stream.
 	detections        []Detection                    // detections stores the detected objects.
 }
 

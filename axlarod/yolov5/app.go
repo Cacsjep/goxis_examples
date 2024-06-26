@@ -3,6 +3,7 @@ package main
 import (
 	"github.com/Cacsjep/goxis/pkg/acapapp"
 	"github.com/Cacsjep/goxis/pkg/axlarod"
+	"github.com/Cacsjep/goxis/pkg/axoverlay"
 	"github.com/Cacsjep/goxis/pkg/axvdo"
 )
 
@@ -67,7 +68,7 @@ type larodExampleApplication struct {
 	sconfig         *axvdo.VideoSteamConfiguration // sconfig holds the configuration for the video stream.
 	infer_result    *axlarod.JobResult             // infer_result holds the result of the detection model job.
 	threshold       float32                        // threshold is the minimum score required for an object to be considered detected.
-	overlayProvider *acapapp.OverlayProvider       // overlayProvider is used to draw overlay on the video stream.
+	overlayProvider *axoverlay.OverlayProvider     // overlayProvider is used to draw overlay on the video stream.
 	detections      []Detection                    // detections stores the detected objects.
 	iouThreshold    float64                        // iouThreshold is the threshold for Intersection over Union (IoU) for non-maximum suppression.
 }
@@ -99,7 +100,12 @@ func Initalize() (*larodExampleApplication, error) {
 	}
 
 	// Initialize the preprocessing model
-	if err = lea.app.FrameProvider.SetLarodPostProccessor("cpu-proc", axlarod.PreProccessOutputFormatRgbInterleaved, &axvdo.VdoResolution{Width: lea.yoloInputWidth, Height: lea.yoloInputHeight}); err != nil {
+	if err = lea.app.FrameProvider.SetLarodPostProccessor(
+		"cpu-proc",
+		axlarod.PreProccessOutputFormatRgbInterleaved,
+		&axvdo.VdoResolution{Width: lea.yoloInputWidth, Height: lea.yoloInputHeight},
+		func(b []byte) []byte { return b },
+	); err != nil {
 		return nil, err
 	}
 

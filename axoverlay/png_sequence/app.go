@@ -12,7 +12,7 @@ import (
 // ! Note: Overlay callbacks only invoked when stream is viewed via web ui or rtsp etc..
 var (
 	app             *acapapp.AcapApplication
-	overlayProvider *acapapp.OverlayProvider
+	overlayProvider *axoverlay.OverlayProvider
 	err             error
 	image_seq       *ImageSequence
 )
@@ -71,13 +71,13 @@ func main() {
 	image_seq = NewImageSequence(24)
 
 	// Overlayprovider is an highlevel wrapper around AxOvleray to make life easier
-	if overlayProvider, err = acapapp.NewOverlayProvider(renderCallback, adjustmentCallback, streamSelectCallback); err != nil {
+	if overlayProvider, err = axoverlay.NewOverlayProvider(renderCallback, adjustmentCallback, streamSelectCallback); err != nil {
 		panic(err)
 	}
 	app.AddCloseCleanFunc(overlayProvider.Cleanup)
 
 	// we pass app as userdata to access syslog from app in callbacks
-	if _, err = overlayProvider.AddOverlay(acapapp.NewAnchorCenterRrgbaOverlay(axoverlay.AxOverlayTopLeft, app)); err != nil {
+	if _, err = overlayProvider.AddOverlay(axoverlay.NewAnchorCenterRrgbaOverlay(axoverlay.AxOverlayTopLeft, app)); err != nil {
 		app.Syslog.Crit(err.Error())
 	}
 
