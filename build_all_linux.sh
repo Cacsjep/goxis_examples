@@ -7,6 +7,7 @@ goxisbuilder -appdir "./axlarod/object_detection" -files ssd_mobilenet_v2_coco_q
 goxisbuilder -appdir "./axlarod/yolov5" -files yolov5n.tflite
 goxisbuilder -appdir "./axlicense" 
 goxisbuilder -appdir "./axoverlay/rects_text"
+goxisbuilder -appdir "./axoverlay/pixel_array"
 goxisbuilder -appdir "./axoverlay/png_sequence" -files zinta
 goxisbuilder -appdir "./axparameter"
 goxisbuilder -appdir "./axstorage"

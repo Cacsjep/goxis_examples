@@ -25,6 +25,7 @@ goxisbuilder -appdir "./axlarod/object_detection" -files ssd_mobilenet_v2_coco_q
 goxisbuilder -appdir "./axlarod/yolov5" -files yolov5n.tflite
 goxisbuilder -appdir "./axlicense" 
 goxisbuilder -appdir "./axoverlay/rects_text"
+goxisbuilder -appdir "./axoverlay/pixel_array"
 goxisbuilder -appdir "./axoverlay/png_sequence" -files zinta
 goxisbuilder -appdir "./axparameter"
 goxisbuilder -appdir "./axstorage"
@@ -44,7 +45,8 @@ go packages directly without using acapapp package.
 | `axevent/send`	            | Demonstrate how to declare and send an event using acapapp package     |
 | `axevent/subscribe`	        | Demonstrate how to subscribe to an Virutal Input state change          |
 | `axoverlay/rects_text`	    | Render rects and a text via axolveray api                              |
-| `axoverlay/png_sequence`	    | Render a sequence of png images via axoverlay api                                                |
+| `axoverlay/pixel_array`	    | Render a array for pixel via axoverlay api                             |
+| `axoverlay/png_sequence`	    | Render a sequence of png images via axoverlay api                      |
 | `axlarod/classify`	        | Classification example with larod and vdo api  (artpec-8)              |
 | `axlarod/object_detection`	| Object detection example with larod/vdo and overlay api api  (artpec-8)|
 | `axlarod/yolov5`	            | Yolov5 detection example with larod/vdo and overlay api api  (artpec-8)|
