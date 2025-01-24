@@ -20,6 +20,7 @@ git clone https://github.com/Cacsjep/goxis_examples
 cd goxis_examples
 goxisbuilder -appdir "./axevent/send"
 goxisbuilder -appdir "./axevent/subscribe"
+goxisbuilder -appdir "./axevent/multiple_subscribe"
 goxisbuilder -appdir "./axlarod/classify" -files converted_model.tflite
 goxisbuilder -appdir "./axlarod/object_detection" -files ssd_mobilenet_v2_coco_quant_postprocess.tflite
 goxisbuilder -appdir "./axlarod/yolov5" -files yolov5n.tflite
@@ -44,6 +45,7 @@ go packages directly without using acapapp package.
 |-----------------|--------------|
 | `axevent/send`	            | Demonstrate how to declare and send an event using acapapp package     |
 | `axevent/subscribe`	        | Demonstrate how to subscribe to an Virutal Input state change          |
+| `axevent/multiple_subscribe`	| Demonstrate how to subscribe to a lot of events at once                |
 | `axoverlay/rects_text`	    | Render rects and a text via axolveray api                              |
 | `axoverlay/pixel_array`	    | Render a array for pixel via axoverlay api                             |
 | `axoverlay/png_sequence`	    | Render a sequence of png images via axoverlay api                      |

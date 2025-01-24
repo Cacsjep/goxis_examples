@@ -1,6 +1,7 @@
 go install github.com/Cacsjep/goxisbuilder@latest
 goxisbuilder.exe -appdir "./axevent/send"
 goxisbuilder.exe -appdir "./axevent/subscribe"
+goxisbuilder.exe -appdir "./axevent/multiple_subscribe"
 goxisbuilder.exe -appdir "./axlarod/classify" -files converted_model.tflite
 goxisbuilder.exe -appdir "./axlarod/object_detection" -files ssd_mobilenet_v2_coco_quant_postprocess.tflite
 goxisbuilder.exe -appdir "./axlarod/yolov5" -files yolov5n.tflite
