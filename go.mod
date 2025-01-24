@@ -3,7 +3,7 @@ module github.com/Cacsjep/goxis_examples
 go 1.22.0
 
 require (
-	github.com/Cacsjep/goxis v1.5.8
+	github.com/Cacsjep/goxis v1.6.4
 	github.com/gofiber/fiber/v2 v2.52.4
 )
 

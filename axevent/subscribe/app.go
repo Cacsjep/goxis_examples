@@ -23,10 +23,7 @@ func main() {
 
 	// VirtualInputEventKvs is a helper function to create a AXEventKeyValueSet for a VirtualInput event.
 	// You can build your own AXEventKeyValueSet with the NewTns1AxisEvent or NewTnsAxisEvent.
-	vio_event, err := axevent.VirtualInputEventKvs(utils.IntPtr(1), nil) // We pass nil because we want to listen to all input states. If you want to listen to a specific state, you can pass utils.BoolPtr(true) or utils.BoolPtr(false)
-	if err != nil {
-		app.Syslog.Crit(err.Error())
-	}
+	vio_event := axevent.DeviceIoVirtualInputEventKvs(utils.IntPtr(1), nil) // We pass nil because we want to listen to all input states. If you want to listen to a specific state, you can pass utils.BoolPtr(true) or utils.BoolPtr(false)
 
 	// OnEvent create a subscription callback for the given event key value set.
 	// You can test via changing the state of the virtual input via:
@@ -37,7 +34,7 @@ func main() {
 	//  	Otherwise, the callback will block the event handler.
 	vio_subscription_id, err := app.OnEvent(vio_event, func(e *axevent.Event) {
 		// You can also build your own events =)
-		var vi axevent.VirtualInputEvent
+		var vi axevent.DeviceIoVirtualInputEvent
 		// You could aslo read manually from the event kvs like
 		// e.Kvs.GetInteger("port", nil) or
 		// e.Kvs.GetBoolean("active", nil)
