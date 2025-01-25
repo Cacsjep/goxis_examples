@@ -33,6 +33,8 @@ goxisbuilder -appdir "./axstorage"
 goxisbuilder -appdir "./vapix"
 goxisbuilder -appdir "./vdostream"
 goxisbuilder -appdir "./webserver"
+goxisbuilder -appdir "./axmdb/consume-scene-metadata"
+goxisbuilder -appdir "./axmdb/scene-metadata-overlay"
 ```
 
 Examples are really close to existing C examples of the [AXIS Native SDK repo](https://github.com/AxisCommunications/acap-native-sdk-examples).
@@ -57,3 +59,5 @@ go packages directly without using acapapp package.
 | `license` 	                | Show how to obtain the license state                                   |
 | `vdostream` 	                | Demonstration how to get video frames from vdo                         |
 | `webserver`                   | Reverse proxy webserver with fiber                                     |
+| `axmdb/consume-scene-metadata`| Consuming AXIS Scene Metadata via Message Broker API                   |
+| `axmdb/scene-metadata-overlay`| Consuming and Overlay AXIS Scene Metadata                              |

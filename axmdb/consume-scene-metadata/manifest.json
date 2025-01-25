@@ -2,8 +2,8 @@
     "schemaVersion": "1.7.3",
     "acapPackageConf": {
         "setup": {
-            "friendlyName": "Goxis AxMbd Example",
-            "appName": "axmdb",
+            "friendlyName": "Goxis AxMbd CSD Example",
+            "appName": "axcsdmdb",
             "vendor": "Goxis",
             "embeddedSdkVersion": "3.0",
             "runMode": "never",
