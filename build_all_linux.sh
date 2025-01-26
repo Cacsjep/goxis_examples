@@ -5,7 +5,7 @@ goxisbuilder -appdir "./axevent/subscribe"
 goxisbuilder -appdir "./axevent/multiple_subscribe"
 goxisbuilder -appdir "./axlarod/classify" -files converted_model.tflite
 goxisbuilder -appdir "./axlarod/object_detection" -files ssd_mobilenet_v2_coco_quant_postprocess.tflite
-goxisbuilder -appdir "./axlarod/face_detection" -files ssd_mobilenet_v2_face_quant_postprocess.tflite
+goxisbuilder -appdir "./axlarod/face_tracking" -files ssd_mobilenet_v2_face_quant_postprocess.tflite
 goxisbuilder -appdir "./axlarod/yolov5" -files yolov5n.tflite
 goxisbuilder -appdir "./axlicense" 
 goxisbuilder -appdir "./axoverlay/rects_text"

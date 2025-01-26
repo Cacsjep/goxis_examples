@@ -10,8 +10,8 @@
     },
     "acapPackageConf": {
         "setup": {
-            "friendlyName": "Goxis Face D. Axlarod Example",
-            "appName": "axlarofdetectexample",
+            "friendlyName": "Goxis Face Tracking Example",
+            "appName": "axlarodfacetexample",
             "vendor": "Goxis",
             "embeddedSdkVersion": "3.0",
             "runMode": "never",

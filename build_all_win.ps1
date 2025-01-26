@@ -4,7 +4,7 @@ goxisbuilder.exe -appdir "./axevent/subscribe"
 goxisbuilder.exe -appdir "./axevent/multiple_subscribe"
 goxisbuilder.exe -appdir "./axlarod/classify" -files converted_model.tflite
 goxisbuilder.exe -appdir "./axlarod/object_detection" -files ssd_mobilenet_v2_coco_quant_postprocess.tflite
-goxisbuilder.exe -appdir "./axlarod/face_detection" -files ssd_mobilenet_v2_face_quant_postprocess.tflite
+goxisbuilder.exe -appdir "./axlarod/face_tracking" -files ssd_mobilenet_v2_face_quant_postprocess.tflite
 goxisbuilder.exe -appdir "./axlarod/yolov5" -files yolov5n.tflite
 goxisbuilder.exe -appdir "./axlicense" 
 goxisbuilder.exe -appdir "./axoverlay/pixel_array"

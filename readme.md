@@ -24,7 +24,7 @@ goxisbuilder -appdir "./axevent/multiple_subscribe"
 goxisbuilder -appdir "./axlarod/classify" -files converted_model.tflite
 goxisbuilder -appdir "./axlarod/object_detection" -files ssd_mobilenet_v2_coco_quant_postprocess.tflite
 goxisbuilder -appdir "./axlarod/yolov5" -files yolov5n.tflite
-goxisbuilder -appdir "./axlarod/face_detection" -files ssd_mobilenet_v2_face_quant_postprocess.tflite
+goxisbuilder -appdir "./axlarod/face_tracking" -files ssd_mobilenet_v2_face_quant_postprocess.tflite
 goxisbuilder -appdir "./axlicense" 
 goxisbuilder -appdir "./axoverlay/rects_text"
 goxisbuilder -appdir "./axoverlay/pixel_array"
@@ -55,7 +55,7 @@ go packages directly without using acapapp package.
 | `axlarod/classify`	        | Classification example with larod and vdo api  (artpec-8)                  |
 | `axlarod/object_detection`	| Object detection example with larod/vdo and overlay api (artpec-8)         |
 | `axlarod/yolov5`	            | Yolov5 detection example with larod/vdo and overlay api (artpec-8)         |
-| `axlarod/face_detection`	    | Mobilenet face detection example with larod/vdo and overlay api (artpec-8) |
+| `axlarod/face_tracking`	    | Mobilenet face tracking example with larod/vdo and overlay api (artpec-8)  |
 | `axparameter`                 | Demonstrate how to get an parameter and listen to changes                  |
 | `axstorage`                   | Interact with axstorage api                                                |
 | `license` 	                | Show how to obtain the license state                                       |

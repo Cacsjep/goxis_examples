@@ -13,8 +13,8 @@ var (
 )
 
 // ! Note this example only works on Artpec-8
-// This example demonstrates how detect objects in video frames using the larod package.
-// and overlay bounding boxes with axoverlay pkg.
+// This example demonstrates how track faces in a video stream using the SORT with model ssd_mobilenet_v2_face
+// and overlay the result via axoverlay.
 func main() {
 	if lea, err = Initalize(); err != nil {
 		panic(err)
@@ -87,6 +87,7 @@ type larodExampleApplication struct {
 	threshold                float32                        // threshold is the minimum score required for an object to be considered detected.
 	overlayProvider          *axoverlay.OverlayProvider     // overlayProvider is used to draw overlay on the video stream.
 	detections               []Detection                    // detections stores the detected objects.
+	sortTracker              *SORT                          // sortTracker is used to track objects in the video stream.
 }
 
 // Initialize prepares and initializes all necessary components for the application.
@@ -100,16 +101,17 @@ func Initalize() (*larodExampleApplication, error) {
 		mobileNetFaceInputWidth:  320,
 		mobileNetFaceInputHeight: 320,
 		detections:               []Detection{},
+		sortTracker:              NewSORT(5, 0.2, 0.3),
 	}
 
 	// Initialize a new ACAP application instance.
 	// AcapApplication initializes the ACAP application with there name, eventloop, and syslog etc..
 	lea.app = acapapp.NewAcapApplication()
 
-	// Determine the stream resolution
-	if err := lea.SetupStreamResolution(); err != nil {
-		return nil, err
-	}
+	// TODO: Handle proper dimensions handling, currently we are cropped for some reason even
+	// we had for example same width we currently cant detect on left or right edge.
+	lea.streamWidth = 320
+	lea.streamHeight = 180
 
 	// Initialize/Connecting Larod
 	if err = lea.app.InitalizeLarod(); err != nil {

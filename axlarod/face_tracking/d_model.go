@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"time"
 
 	"github.com/Cacsjep/goxis/pkg/axlarod"
 )
@@ -95,8 +96,12 @@ type mobileNetFaceResult struct {
 }
 
 type Detection struct {
-	Score, Class float32
-	Box          axlarod.BoundingBox
+	Score, Class  float32
+	Box           axlarod.BoundingBox
+	ID            int
+	IsNew         bool // Indicates if this detection created a new track
+	Age           int  // Number of frames since the track was last updated
+	TrackingSince time.Duration
 }
 
 // InferenceOutputRead converts raw model output data into structured prediction results.
@@ -120,6 +125,5 @@ func (lea *larodExampleApplication) InferenceOutputRead(result *mobileNetFaceRes
 			}
 		}
 	}
-	lea.detections = detections
-	return &PredictionResult{Detections: detections}, nil
+	return &PredictionResult{Detections: lea.sortTracker.Update(detections)}, nil
 }

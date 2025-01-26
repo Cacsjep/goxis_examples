@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"image/color"
 
 	"github.com/Cacsjep/goxis/pkg/axoverlay"
 )
@@ -22,21 +23,31 @@ func (lea *larodExampleApplication) InitOverlay() error {
 func renderCallback(renderEvent *axoverlay.OverlayRenderEvent) {
 	lea := renderEvent.Userdata.(*larodExampleApplication)
 	renderEvent.CairoCtx.DrawTransparent(renderEvent.Stream.Width, renderEvent.Stream.Height)
+
+	// Draw the sort tracker average score
+	renderEvent.CairoCtx.DrawText(fmt.Sprintf("Tracking score: %d%%", int(lea.sortTracker.GetAverageSortScore()*100)), 10, 10, 32.0, "serif", axoverlay.ColorBlack)
+
 	for _, obj := range lea.prediction_result.Detections {
 		scaled_box := obj.Box.Scale(renderEvent.Stream.Width, renderEvent.Stream.Height)
 		cords := scaled_box.ToCords64()
-		renderEvent.CairoCtx.DrawBoundingBox(
+		DrawBoundingBox(
+			renderEvent.CairoCtx,
 			cords.X,
 			cords.Y,
 			cords.W,
 			cords.H,
 			axoverlay.ColorBlack,
-			fmt.Sprintf("%d%%", int(obj.Score*100)),
+			fmt.Sprintf("ID-%d %d%%, %d sec", obj.ID, int(obj.Score*100), int(obj.TrackingSince.Seconds())),
 			axoverlay.ColorWite,
-			17,
+			13,
 			"sans",
-			170,
+			100,
 		)
 	}
+}
 
+func DrawBoundingBox(ctx *axoverlay.CairoContext, x float64, y float64, width float64, height float64, rectColor color.RGBA, label string, labelColor color.RGBA, labelSize float64, labelFont string, minBoxSizeRenderW int) {
+	rectLinewidth := float64(3)
+	ctx.DrawBoundingBoxRect(x, y, width, height, rectColor, rectLinewidth, 0.3)
+	ctx.DrawBoundingBoxLabel(label, x-(rectLinewidth/2), y-(rectLinewidth/2), 7, labelSize, labelFont, labelColor, rectColor)
 }
