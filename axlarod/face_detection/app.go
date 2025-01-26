@@ -59,10 +59,11 @@ func main() {
 				lea.app.Syslog.Errorf("Failed to redraw overlay: %s", err.Error())
 			}
 
-			lea.app.Syslog.Infof("Frame: %d, PP time: %.fms, Infer. exec time: %.fms, Detections: %d",
+			lea.app.Syslog.Infof("Frame: %d, PreProcess time: %.fms, Inference time: %.fms, Overall Time: %.fms, Detections: %d",
 				frame.SequenceNbr,
 				lea.pp_result.ExecutionTime,
 				lea.infer_result.ExecutionTime,
+				lea.pp_result.ExecutionTime+lea.infer_result.ExecutionTime,
 				len(lea.detections),
 			)
 

@@ -9,7 +9,7 @@ import "github.com/Cacsjep/goxis/pkg/axvdo"
 func (lea *larodExampleApplication) InitalizeAndStartVdo() error {
 	vdo_format := axvdo.VdoFormatYUV
 	stream_cfg := axvdo.VideoSteamConfiguration{Format: &vdo_format, Width: &lea.streamWidth, Height: &lea.streamHeight, Framerate: &lea.fps}
-	lea.app.Syslog.Infof("Initializing video stream with format: %s, resolution: %dx%d, framerate: %d", vdo_format, lea.streamWidth, lea.streamHeight, lea.fps)
+	lea.app.Syslog.Infof("Initializing video stream with resolution: %dx%d, framerate: %d", lea.streamWidth, lea.streamHeight, lea.fps)
 	if err = lea.app.NewFrameProvider(stream_cfg); err != nil {
 		return err
 	}
@@ -33,7 +33,7 @@ func (l *larodExampleApplication) SetupStreamResolution() error {
 	}
 	l.streamWidth = model_reso.Width
 	l.streamHeight = model_reso.Height
-	l.app.Syslog.Infof("Stream resolution set to %dx%d", l.streamWidth, l.streamHeight)
+	l.app.Syslog.Infof("Chosen vdo resolution: %dx%d", l.streamWidth, l.streamHeight)
 	return nil
 
 }
