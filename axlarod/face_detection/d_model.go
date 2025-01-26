@@ -101,8 +101,6 @@ type Detection struct {
 
 // InferenceOutputRead converts raw model output data into structured prediction results.
 // Returns a PredictionResult or an error if data conversion fails.
-//
-// https://github.com/AxisCommunications/acap-native-sdk-examples/blob/7bff215e7673e4a72630bb89f04c2f7b64cf319c/object-detection/app/object_detection.c#L942
 func (lea *larodExampleApplication) InferenceOutputRead(result *mobileNetFaceResult) (*PredictionResult, error) {
 	var detections []Detection
 	for i := 0; i < result.detections; i++ {

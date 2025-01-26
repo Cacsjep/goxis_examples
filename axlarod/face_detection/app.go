@@ -15,8 +15,6 @@ var (
 // ! Note this example only works on Artpec-8
 // This example demonstrates how detect objects in video frames using the larod package.
 // and overlay bounding boxes with axoverlay pkg.
-//
-// Orginal C Example: https://github.com/AxisCommunications/acap-native-sdk-examples/tree/main/object-detection
 func main() {
 	if lea, err = Initalize(); err != nil {
 		panic(err)
