@@ -96,12 +96,10 @@ type larodExampleApplication struct {
 func Initalize() (*larodExampleApplication, error) {
 
 	lea := &larodExampleApplication{
-		fps:                      12,
+		fps:                      10,
 		threshold:                0.1,
 		mobileNetFaceInputWidth:  320,
 		mobileNetFaceInputHeight: 320,
-		streamWidth:              480,
-		streamHeight:             360,
 		detections:               []Detection{},
 	}
 
@@ -110,9 +108,9 @@ func Initalize() (*larodExampleApplication, error) {
 	lea.app = acapapp.NewAcapApplication()
 
 	// Determine the stream resolution
-	// if err := lea.SetupStreamResolution(); err != nil {
-	// 	return nil, err
-	// }
+	if err := lea.SetupStreamResolution(); err != nil {
+		return nil, err
+	}
 
 	// Initialize/Connecting Larod
 	if err = lea.app.InitalizeLarod(); err != nil {
