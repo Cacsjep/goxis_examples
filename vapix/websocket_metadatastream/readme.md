@@ -14,7 +14,7 @@ The application leverages the `acapapp` package for logging and cleanup and the 
 
 ## Installation
 
-Clone the project or include the necessary packages in your Go program:
+Clone the example repo or include the necessary packages in your Go program:
 
 ```shell
 go get github.com/Cacsjep/goxis/pkg/acapapp
