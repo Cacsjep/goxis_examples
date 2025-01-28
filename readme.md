@@ -31,7 +31,8 @@ goxisbuilder -appdir "./axoverlay/pixel_array"
 goxisbuilder -appdir "./axoverlay/png_sequence" -files zinta
 goxisbuilder -appdir "./axparameter"
 goxisbuilder -appdir "./axstorage"
-goxisbuilder -appdir "./vapix"
+goxisbuilder -appdir "./vapix/list_params"
+goxisbuilder -appdir "./vapix/websocket_metadatastream"
 goxisbuilder -appdir "./vdostream"
 goxisbuilder -appdir "./webserver"
 goxisbuilder -appdir "./axmdb/consume-scene-metadata"
@@ -46,20 +47,22 @@ go packages directly without using acapapp package.
 
 | Example         | Description |
 |-----------------|--------------|
-| `axevent/send`	            | Demonstrate how to declare and send an event using acapapp package         |
-| `axevent/subscribe`	        | Demonstrate how to subscribe to an Virutal Input state change              |
-| `axevent/multiple_subscribe`	| Demonstrate how to subscribe to a lot of events at once                    |
-| `axoverlay/rects_text`	    | Render rects and a text via axolveray api                                  |
-| `axoverlay/pixel_array`	    | Render a array for pixel via axoverlay api                                 |
-| `axoverlay/png_sequence`	    | Render a sequence of png images via axoverlay api                          |
-| `axlarod/classify`	        | Classification example with larod and vdo api  (artpec-8)                  |
-| `axlarod/object_detection`	| Object detection example with larod/vdo and overlay api (artpec-8)         |
-| `axlarod/yolov5`	            | Yolov5 detection example with larod/vdo and overlay api (artpec-8)         |
-| `axlarod/face_tracking`	    | Mobilenet face tracking example with larod/vdo and overlay api (artpec-8)  |
-| `axparameter`                 | Demonstrate how to get an parameter and listen to changes                  |
-| `axstorage`                   | Interact with axstorage api                                                |
-| `license` 	                | Show how to obtain the license state                                       |
-| `vdostream` 	                | Demonstration how to get video frames from vdo                             |
-| `webserver`                   | Reverse proxy webserver with fiber                                         |
-| `axmdb/consume-scene-metadata`| Consuming AXIS Scene Metadata via Message Broker API                       |
-| `axmdb/scene-metadata-overlay`| Consuming and Overlay AXIS Scene Metadata                                  |
+| `axevent/send`	                | Demonstrate how to declare and send an event using acapapp package         |
+| `axevent/subscribe`	            | Demonstrate how to subscribe to an Virutal Input state change              |
+| `axevent/multiple_subscribe`	    | Demonstrate how to subscribe to a lot of events at once                    |
+| `axoverlay/rects_text`	        | Render rects and a text via axolveray api                                  |
+| `axoverlay/pixel_array`	        | Render a array for pixel via axoverlay api                                 |
+| `axoverlay/png_sequence`	        | Render a sequence of png images via axoverlay api                          |
+| `axlarod/classify`	            | Classification example with larod and vdo api  (artpec-8)                  |
+| `axlarod/object_detection`	    | Object detection example with larod/vdo and overlay api (artpec-8)         |
+| `axlarod/yolov5`	                | Yolov5 detection example with larod/vdo and overlay api (artpec-8)         |
+| `axlarod/face_tracking`	        | Mobilenet face tracking example with larod/vdo and overlay api (artpec-8)  |
+| `axparameter`                     | Demonstrate how to get an parameter and listen to changes                  |
+| `axstorage`                       | Interact with axstorage api                                                |
+| `license` 	                    | Show how to obtain the license state                                       |
+| `vdostream` 	                    | Demonstration how to get video frames from vdo                             |
+| `webserver`                       | Reverse proxy webserver with fiber                                         |
+| `axmdb/consume-scene-metadata`    | Consuming AXIS Scene Metadata via Message Broker API                       |
+| `axmdb/scene-metadata-overlay`    | Consuming and Overlay AXIS Scene Metadata                                  |
+| `vapix/list_params`               | Using VAPIX API to get a list of params, and activate Virtual Input Port   |
+| `vapix/websocket_metadatastream`  | Using VAPIX API to consume the websocket metadata stream                   |

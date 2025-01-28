@@ -2,8 +2,8 @@
     "schemaVersion": "1.6.0",
     "acapPackageConf": {
         "setup": {
-            "friendlyName": "Goxis Vapix Example",
-            "appName": "vapixexample",
+            "friendlyName": "Goxis Vapix Example WS Metadata Stream",
+            "appName": "vapixwsmsexample",
             "vendor": "Goxis",
             "embeddedSdkVersion": "3.0",
             "runMode": "never",
