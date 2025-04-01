@@ -96,7 +96,7 @@ type larodExampleApplication struct {
 func Initalize() (*larodExampleApplication, error) {
 
 	lea := &larodExampleApplication{
-		fps:                      10,
+		fps:                      15,
 		threshold:                0.1,
 		mobileNetFaceInputWidth:  320,
 		mobileNetFaceInputHeight: 320,

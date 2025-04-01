@@ -41,7 +41,7 @@ func renderCallback(renderEvent *axoverlay.OverlayRenderEvent) {
 			axoverlay.ColorWite,
 			13,
 			"sans",
-			100,
+			10,
 		)
 	}
 }
