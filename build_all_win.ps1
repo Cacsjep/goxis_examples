@@ -1,4 +1,4 @@
-go install github.com/Cacsjep/goxisbuilder@latest
+go install github.com/Cacsjep/goxisbuilder@v1.2.6
 goxisbuilder.exe -appdir "./axevent/send"
 goxisbuilder.exe -appdir "./axevent/subscribe"
 goxisbuilder.exe -appdir "./axevent/multiple_subscribe"
